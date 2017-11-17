@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <title>Grom</title>
+    <link rel="stylesheet" type="text/css" href="styles/css/mainstyles.css">
+</head>
+<body class="white-text">
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+<header class="indigo ">
+header
+</header>
+
+<div class="indigo darken-1" id="outerSidebar">
+outersidebar
+</div>
+
+<div class="indigo lighten-1" id="innerSidebar">
+innersidebar
+</div>
+
+<main class="teal lighten-2">
+main
+</main>
+
+
+<script>
+	// You can also require other files to run in this process
+	require('./renderer.js');
+</script>
+</body>
 </html>

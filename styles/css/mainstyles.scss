@@ -1,0 +1,31 @@
+@import "../../node_modules/materialize-css/sass/materialize";
+
+body {
+  display: grid;
+  grid-template-columns: 200px 150px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: "header header header" "osidebar isidebar main";
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  header {
+    grid-area: header;
+  }
+
+  #outerSidebar {
+    grid-area: osidebar;
+  }
+
+  #innerSidebar {
+    grid-area: isidebar;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+}
+
+
+

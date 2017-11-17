@@ -1,10 +1,12 @@
 {
   "name": "grom",
   "version": "0.0.1",
-  "description": "Groms -- Get rid of messangers -- is an multi messanger client",
+  "description": "Groms -- Get rid of messengers",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "npm install && cp -a node_modules/materialize-css/dist/fonts/. styles/fonts/",
+    "clean": "rm -rf node_modules"
   },
   "repository": "",
   "keywords": [
@@ -15,5 +17,10 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.2"
   }
 }
