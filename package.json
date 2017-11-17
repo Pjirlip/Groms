@@ -1,0 +1,19 @@
+{
+  "name": "grom",
+  "version": "0.0.1",
+  "description": "Groms -- Get rid of messangers -- is an multi messanger client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "grom",
+    "messangers"
+  ],
+  "author": "Philipp Dippel",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}
