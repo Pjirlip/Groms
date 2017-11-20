@@ -5,10 +5,11 @@ const path = require('path');
 
 module.exports = class WindowManager
 {
-	constructor()
+	constructor(storage)
 	{
 		this.mainWindow = null;
 		this.settingsWindow = null;
+		this.storage = storage;
 	}
 
 	createMainWindow()

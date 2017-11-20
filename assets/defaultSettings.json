@@ -1,0 +1,20 @@
+{
+  "generalUsername": "Username",
+  "irc": {
+    "username": "IRC Username"
+  },
+  "discord": {
+    "username": "Discord Username"
+  },
+  "telegram": {
+    "username": "Telegram Username"
+  },
+  "facebook":
+  {
+    "username": "Facebook Username"
+  },
+  "whatsapp":
+  {
+    "username": "Whatsapp Username"
+  }
+}

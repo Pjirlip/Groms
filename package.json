@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "npm install && cp -a node_modules/materialize-css/dist/fonts/. styles/fonts/",
+    "build": "npm install && cp -a node_modules/materialize-css/dist/fonts/. styles/fonts/ && npm run rebuild",
+    "rebuild": "electron-rebuild -f -w keytar",
     "clean": "rm -rf node_modules"
   },
   "repository": "",
@@ -16,11 +17,13 @@
   "author": "Philipp Dippel",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "electron-rebuild": "^1.6.0"
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
+    "keytar": "^4.0.5",
     "materialize-css": "^0.100.2"
   }
 }
