@@ -10,13 +10,16 @@ module.exports = class WindowManager
 		this.mainWindow = null;
 		this.settingsWindow = null;
 		this.storage = storage;
+		this.fullSize = false;
+		this.screenWidth = electron.screen.getPrimaryDisplay().size.width;
+		this.screenHeight =  electron.screen.getPrimaryDisplay().size.height;
 	}
 
 	createMainWindow()
 	{
 		this.mainWindow = new BrowserWindow({
-			width: electron.screen.getPrimaryDisplay().size.width,
-			height: electron.screen.getPrimaryDisplay().size.height / 1.8,
+			width: this.screenWidth,
+			height: Math.round(this.screenHeight / 1.6),
 			frame: false,
 			alwaysOnTop: true,
 			hasShadow: true,
@@ -63,4 +66,19 @@ module.exports = class WindowManager
 			this.settingsWindow = null;
 		});
 	}
+
+	toggleMainSize()
+	{
+		if(this.fullSize)
+		{
+			this.fullSize = false;
+			this.mainWindow.setSize(this.screenWidth, Math.round(this.screenHeight / 1.6));
+		}
+		else
+			{
+				this.fullSize = true;
+				this.mainWindow.setSize(this.screenWidth, this.screenHeight);
+			}
+	}
+
 };

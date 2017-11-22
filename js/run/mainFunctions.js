@@ -1,4 +1,5 @@
 const ipc = require('electron').ipcRenderer;
+const ServiceHandler = require('../lib/ServiceHandler.js');
 
 $('#showSettings').click(() =>
 {
@@ -10,6 +11,8 @@ $('.chip-all').click(() => {
 	emptyChannelsAndContent();
 	$('.chip').removeClass('active');
 	$('.chip-all').addClass('active');
+	ipc.sendSync('setService', ServiceHandler.SERVICE.ALLE);
+	$('#whatsappContent').hide();
 });
 
 $('.chip-discord').click(() =>
@@ -18,13 +21,8 @@ $('.chip-discord').click(() =>
 	emptyChannelsAndContent();
 	$('.chip').removeClass('active');
 	$('.chip-discord').addClass('active');
-});
-
-$('.chip-facebook').click(() =>{
-	showOneSidebar();
-	emptyChannelsAndContent();
-	$('.chip').removeClass('active');
-	$('.chip-facebook').addClass('active');
+	ipc.sendSync('setService', ServiceHandler.SERVICE.ALLE);
+	$('#whatsappContent').hide();
 });
 
 $('.chip-irc').click(() =>
@@ -33,6 +31,8 @@ $('.chip-irc').click(() =>
 	emptyChannelsAndContent();
 	$('.chip').removeClass('active');
 	$('.chip-irc').addClass('active');
+	ipc.sendSync('setService', ServiceHandler.SERVICE.IRC);
+	$('#whatsappContent').hide();
 });
 
 $('.chip-telegram').click(() => {
@@ -40,14 +40,29 @@ $('.chip-telegram').click(() => {
 	emptyChannelsAndContent();
 	$('.chip').removeClass('active');
 	$('.chip-telegram').addClass('active');
+	ipc.sendSync('setService', ServiceHandler.SERVICE.TELEGRAM);
+	$('#whatsappContent').hide();
 });
 
 $('.chip-whatsapp').click(() =>
 {
-	showOneSidebar();
+	hideSidebars();
 	emptyChannelsAndContent();
 	$('.chip').removeClass('active');
 	$('.chip-whatsapp').addClass('active');
+	ipc.sendSync('setService', ServiceHandler.SERVICE.WHATSAPP);
+	$('#whatsappContent').show();
+	$('#whatsappContent webview').get(0).reload(true);
+
+});
+
+$('.chip-facebook').click(() =>{
+	showOneSidebar();
+	emptyChannelsAndContent();
+	$('.chip').removeClass('active');
+	$('.chip-facebook').addClass('active');
+	ipc.sendSync('setService', ServiceHandler.SERVICE.FACEBOOK);
+	$('#whatsappContent').hide();
 });
 
 

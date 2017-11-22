@@ -1,5 +1,6 @@
 const electron = require('electron');
 const globalShortcut = electron.globalShortcut;
+const app = electron.app;
 
 module.exports = class Shortcuts
 {
@@ -8,6 +9,7 @@ module.exports = class Shortcuts
 		this.windowManager = windowManager;
 		this.isHidden = false;
 		this.toggleVisibillity = null;
+		this.toggleSize = null;
 		this.registerShortcuts();
 	}
 
@@ -28,5 +30,7 @@ module.exports = class Shortcuts
 				this.windowManager.mainWindow.hide();
 			}
 		});
+
+
 	}
 };
