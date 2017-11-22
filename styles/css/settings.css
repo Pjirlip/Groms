@@ -46,7 +46,7 @@
 .materialize-red-text.text-darken-2 {
   color: #b9151b !important; }
 
-.materialize-red.darken-3 {
+.materialize-red.darken-3, body .materialize-red.belowContainers {
   background-color: #a21318 !important; }
 
 .materialize-red-text.text-darken-3 {
@@ -106,7 +106,7 @@
 .red-text.text-darken-2 {
   color: #D32F2F !important; }
 
-.red.darken-3 {
+.red.darken-3, body .red.belowContainers {
   background-color: #C62828 !important; }
 
 .red-text.text-darken-3 {
@@ -190,7 +190,7 @@
 .pink-text.text-darken-2 {
   color: #c2185b !important; }
 
-.pink.darken-3 {
+.pink.darken-3, body .pink.belowContainers {
   background-color: #ad1457 !important; }
 
 .pink-text.text-darken-3 {
@@ -274,7 +274,7 @@
 .purple-text.text-darken-2 {
   color: #7b1fa2 !important; }
 
-.purple.darken-3 {
+.purple.darken-3, body .purple.belowContainers {
   background-color: #6a1b9a !important; }
 
 .purple-text.text-darken-3 {
@@ -358,7 +358,7 @@
 .deep-purple-text.text-darken-2 {
   color: #512da8 !important; }
 
-.deep-purple.darken-3 {
+.deep-purple.darken-3, body .deep-purple.belowContainers {
   background-color: #4527a0 !important; }
 
 .deep-purple-text.text-darken-3 {
@@ -442,7 +442,7 @@
 .indigo-text.text-darken-2 {
   color: #303f9f !important; }
 
-.indigo.darken-3 {
+.indigo.darken-3, body .indigo.belowContainers {
   background-color: #283593 !important; }
 
 .indigo-text.text-darken-3 {
@@ -526,7 +526,7 @@
 .blue-text.text-darken-2 {
   color: #1976D2 !important; }
 
-.blue.darken-3 {
+.blue.darken-3, body .blue.belowContainers {
   background-color: #1565C0 !important; }
 
 .blue-text.text-darken-3 {
@@ -610,7 +610,7 @@
 .light-blue-text.text-darken-2 {
   color: #0288d1 !important; }
 
-.light-blue.darken-3 {
+.light-blue.darken-3, body .light-blue.belowContainers {
   background-color: #0277bd !important; }
 
 .light-blue-text.text-darken-3 {
@@ -694,7 +694,7 @@
 .cyan-text.text-darken-2 {
   color: #0097a7 !important; }
 
-.cyan.darken-3 {
+.cyan.darken-3, body .cyan.belowContainers {
   background-color: #00838f !important; }
 
 .cyan-text.text-darken-3 {
@@ -778,7 +778,7 @@
 .teal-text.text-darken-2 {
   color: #00796b !important; }
 
-.teal.darken-3 {
+.teal.darken-3, body .teal.belowContainers {
   background-color: #00695c !important; }
 
 .teal-text.text-darken-3 {
@@ -862,7 +862,7 @@
 .green-text.text-darken-2 {
   color: #388E3C !important; }
 
-.green.darken-3 {
+.green.darken-3, body .green.belowContainers {
   background-color: #2E7D32 !important; }
 
 .green-text.text-darken-3 {
@@ -946,7 +946,7 @@
 .light-green-text.text-darken-2 {
   color: #689f38 !important; }
 
-.light-green.darken-3 {
+.light-green.darken-3, body .light-green.belowContainers {
   background-color: #558b2f !important; }
 
 .light-green-text.text-darken-3 {
@@ -1030,7 +1030,7 @@
 .lime-text.text-darken-2 {
   color: #afb42b !important; }
 
-.lime.darken-3 {
+.lime.darken-3, body .lime.belowContainers {
   background-color: #9e9d24 !important; }
 
 .lime-text.text-darken-3 {
@@ -1114,7 +1114,7 @@
 .yellow-text.text-darken-2 {
   color: #fbc02d !important; }
 
-.yellow.darken-3 {
+.yellow.darken-3, body .yellow.belowContainers {
   background-color: #f9a825 !important; }
 
 .yellow-text.text-darken-3 {
@@ -1198,7 +1198,7 @@
 .amber-text.text-darken-2 {
   color: #ffa000 !important; }
 
-.amber.darken-3 {
+.amber.darken-3, body .amber.belowContainers {
   background-color: #ff8f00 !important; }
 
 .amber-text.text-darken-3 {
@@ -1234,85 +1234,85 @@
 .amber-text.text-accent-4 {
   color: #ffab00 !important; }
 
-.orange {
+.orange, body .belowContainers {
   background-color: #ff9800 !important; }
 
 .orange-text {
   color: #ff9800 !important; }
 
-.orange.lighten-5 {
+.orange.lighten-5, body .lighten-5.belowContainers {
   background-color: #fff3e0 !important; }
 
 .orange-text.text-lighten-5 {
   color: #fff3e0 !important; }
 
-.orange.lighten-4 {
+.orange.lighten-4, body .lighten-4.belowContainers {
   background-color: #ffe0b2 !important; }
 
 .orange-text.text-lighten-4 {
   color: #ffe0b2 !important; }
 
-.orange.lighten-3 {
+.orange.lighten-3, body .lighten-3.belowContainers {
   background-color: #ffcc80 !important; }
 
 .orange-text.text-lighten-3 {
   color: #ffcc80 !important; }
 
-.orange.lighten-2 {
+.orange.lighten-2, body .lighten-2.belowContainers {
   background-color: #ffb74d !important; }
 
 .orange-text.text-lighten-2 {
   color: #ffb74d !important; }
 
-.orange.lighten-1 {
+.orange.lighten-1, body .lighten-1.belowContainers {
   background-color: #ffa726 !important; }
 
 .orange-text.text-lighten-1 {
   color: #ffa726 !important; }
 
-.orange.darken-1 {
+.orange.darken-1, body .darken-1.belowContainers {
   background-color: #fb8c00 !important; }
 
 .orange-text.text-darken-1 {
   color: #fb8c00 !important; }
 
-.orange.darken-2 {
+.orange.darken-2, body .darken-2.belowContainers {
   background-color: #f57c00 !important; }
 
 .orange-text.text-darken-2 {
   color: #f57c00 !important; }
 
-.orange.darken-3 {
+.orange.darken-3, body .belowContainers {
   background-color: #ef6c00 !important; }
 
 .orange-text.text-darken-3 {
   color: #ef6c00 !important; }
 
-.orange.darken-4 {
+.orange.darken-4, body .darken-4.belowContainers {
   background-color: #e65100 !important; }
 
 .orange-text.text-darken-4 {
   color: #e65100 !important; }
 
-.orange.accent-1 {
+.orange.accent-1, body .accent-1.belowContainers {
   background-color: #ffd180 !important; }
 
 .orange-text.text-accent-1 {
   color: #ffd180 !important; }
 
-.orange.accent-2 {
+.orange.accent-2, body .accent-2.belowContainers {
   background-color: #ffab40 !important; }
 
 .orange-text.text-accent-2 {
   color: #ffab40 !important; }
 
-.orange.accent-3 {
+.orange.accent-3, body .accent-3.belowContainers {
   background-color: #ff9100 !important; }
 
 .orange-text.text-accent-3 {
   color: #ff9100 !important; }
 
-.orange.accent-4 {
+.orange.accent-4, body .accent-4.belowContainers {
   background-color: #ff6d00 !important; }
 
 .orange-text.text-accent-4 {
@@ -1366,7 +1366,7 @@
 .deep-orange-text.text-darken-2 {
   color: #e64a19 !important; }
 
-.deep-orange.darken-3 {
+.deep-orange.darken-3, body .deep-orange.belowContainers {
   background-color: #d84315 !important; }
 
 .deep-orange-text.text-darken-3 {
@@ -1450,7 +1450,7 @@
 .brown-text.text-darken-2 {
   color: #5d4037 !important; }
 
-.brown.darken-3 {
+.brown.darken-3, body .brown.belowContainers {
   background-color: #4e342e !important; }
 
 .brown-text.text-darken-3 {
@@ -1510,7 +1510,7 @@
 .blue-grey-text.text-darken-2 {
   color: #455a64 !important; }
 
-.blue-grey.darken-3 {
+.blue-grey.darken-3, body .blue-grey.belowContainers {
   background-color: #37474f !important; }
 
 .blue-grey-text.text-darken-3 {
@@ -1570,7 +1570,7 @@
 .grey-text.text-darken-2 {
   color: #616161 !important; }
 
-.grey.darken-3 {
+.grey.darken-3, body .grey.belowContainers {
   background-color: #424242 !important; }
 
 .grey-text.text-darken-3 {
@@ -6835,9 +6835,18 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 body {
   display: grid;
-  grid-template-rows: 45px 1fr 80px;
+  grid-template-rows: 45px 1fr 60px;
   grid-template-areas: "containers" "content" "below";
   width: 100vw;
   height: 100vh; }
@@ -6845,9 +6854,21 @@ body {
     grid-area: containers; }
   body .content {
     grid-area: content;
-    height: 100%;
-    width: 100%; }
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .content .container {
+      width: 90%; }
   body .belowContainers {
-    grid-area: below; }
+    grid-area: below;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    body .belowContainers #closeButton {
+      margin-right: 1em;
+      margin-left: 1em; }
+    body .belowContainers #saveButton {
+      margin-right: 2em; }
 
 /*# sourceMappingURL=settings.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mDAYC;EAVC,IAAK;IACH,iBAAiB,EAAE,YAAY;IAC/B,YAAY,EAAE,YAAY;IAC1B,SAAS,EAAE,YAAY;EAEzB,EAAG;IACD,iBAAiB,EAAE,cAAc;IACjC,YAAY,EAAE,cAAc;IAC5B,SAAS,EAAE,cAAc",
+"sources": ["mixinsAndAnimations.scss"],
+"names": [],
+"file": "mixinsAndAnimations.css"
+}

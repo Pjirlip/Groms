@@ -1,24 +1,135 @@
 @import "../../node_modules/materialize-css/sass/materialize";
+@import "mixinsAndAnimations";
+@import "colors";
 
 body {
   display: grid;
   grid-template-columns: 200px 150px 1fr;
   grid-template-rows: 50px 1fr;
-  grid-template-areas: "header header header" "osidebar isidebar main";
+  grid-template-areas: "header header header" "main main main";
   width: 100vw;
   height: 100vh;
   margin: 0;
 
   header {
     grid-area: header;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-areas: "badges settings";
+    padding-top: 5px;
+
+    .badgesArea {
+      grid-area: badges;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .chip {
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        background: #5e5e5d;
+        color: white;
+        font-size: small;
+        font-weight: 400;
+        width: 120px;
+        text-align: center;
+
+        &:hover {
+          @include delayBackground;
+        }
+      }
+
+      .chip-all {
+        &:hover {
+          background: #03C64C;
+        }
+
+        &.active {
+          background: #03C64C;
+        }
+
+      }
+
+      .chip-discord {
+        &:hover {
+          background: $cdiscord;
+        }
+        &.active {
+          background: $cdiscord;
+        }
+      }
+
+      .chip-telegram {
+        &:hover {
+          background: $ctelegram;
+        }
+
+        &.active {
+          background: $ctelegram;
+        }
+      }
+
+      .chip-facebook {
+        &:hover {
+          background: $cFacebook;
+        }
+        &.active {
+          background: $cFacebook;
+        }
+      }
+
+      .chip-irc {
+        &:hover {
+          background: $cIRC;
+        }
+        &.active {
+          background: $cIRC;
+        }
+      }
+
+      .chip-whatsapp {
+        &:hover {
+          background: $cwhatsapp
+        }
+        &.active {
+          background: $cwhatsapp;
+        }
+      }
+
+    }
+
+    .settingsContainer {
+      grid-area: settings;
+      display: grid;
+      justify-content: center;
+
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      .material-icons {
+        cursor: pointer;
+        &:hover {
+          animation: rotating 2s linear infinite;
+        }
+      }
+
+    }
   }
 
   #outerSidebar {
     grid-area: osidebar;
+    display: none;
   }
 
   #innerSidebar {
     grid-area: isidebar;
+    display: none;
   }
 
   main {

@@ -6835,20 +6835,89 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 body {
   display: grid;
   grid-template-columns: 200px 150px 1fr;
   grid-template-rows: 50px 1fr;
-  grid-template-areas: "header header header" "osidebar isidebar main";
+  grid-template-areas: "header header header" "main main main";
   width: 100vw;
   height: 100vh;
   margin: 0; }
   body header {
-    grid-area: header; }
+    grid-area: header;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-areas: "badges settings";
+    padding-top: 5px; }
+    body header .badgesArea {
+      grid-area: badges;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      body header .badgesArea .chip {
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        background: #5e5e5d;
+        color: white;
+        font-size: small;
+        font-weight: 400;
+        width: 120px;
+        text-align: center; }
+        body header .badgesArea .chip:hover {
+          transition: background 0.5s; }
+      body header .badgesArea .chip-all:hover {
+        background: #03C64C; }
+      body header .badgesArea .chip-all.active {
+        background: #03C64C; }
+      body header .badgesArea .chip-discord:hover {
+        background: #7289da; }
+      body header .badgesArea .chip-discord.active {
+        background: #7289da; }
+      body header .badgesArea .chip-telegram:hover {
+        background: #177eb8; }
+      body header .badgesArea .chip-telegram.active {
+        background: #177eb8; }
+      body header .badgesArea .chip-facebook:hover {
+        background: #37427d; }
+      body header .badgesArea .chip-facebook.active {
+        background: #37427d; }
+      body header .badgesArea .chip-irc:hover {
+        background: #F73859; }
+      body header .badgesArea .chip-irc.active {
+        background: #F73859; }
+      body header .badgesArea .chip-whatsapp:hover {
+        background: #25D366; }
+      body header .badgesArea .chip-whatsapp.active {
+        background: #25D366; }
+    body header .settingsContainer {
+      grid-area: settings;
+      display: grid;
+      justify-content: center; }
+      body header .settingsContainer ul {
+        padding: 0;
+        margin: 0; }
+      body header .settingsContainer .material-icons {
+        cursor: pointer; }
+        body header .settingsContainer .material-icons:hover {
+          animation: rotating 2s linear infinite; }
   body #outerSidebar {
-    grid-area: osidebar; }
+    grid-area: osidebar;
+    display: none; }
   body #innerSidebar {
-    grid-area: isidebar; }
+    grid-area: isidebar;
+    display: none; }
   body main {
     grid-area: main; }
 
