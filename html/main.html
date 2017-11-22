@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <title>Grom</title>
     <link rel="stylesheet" type="text/css" href="../styles/css/mainstyles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 </head>
 <body class="white-text">
 
-<header class="indigo ">
-    header
+<header class="teal darken-1">
+    <div class="badgesArea">
+        <div class="chip chip-all active">
+            <img src="../assets/icons/GlobeIcon.png" alt="Alle"> Alle
+        </div>
+        <div class="chip chip-irc">
+            <img src="../assets/icons/IrcIcon.png" alt="IRC Badge"> IRC
+        </div>
+        <div class="chip chip-discord">
+            <img src="../assets/icons/DiscordIcon.png" alt="Discord Badge"> Discord
+        </div>
+        <div class="chip chip-telegram">
+            <img src="../assets/icons/TelegramIcon.png" alt="Telegram Badge"> Telegram
+        </div>
+        <div class="chip chip-whatsapp">
+            <img src="../assets/icons/WhatsappIcon.png" alt="Whatsapp Badge"> Whatsapp
+        </div>
+        <div class="chip chip-facebook">
+            <img src="../assets/icons/FacebookIcon.png" alt="Facebook Badge"> Facebook
+        </div>
+    </div>
+
+
+
+    <div class="settingsContainer">
+        <ul>
+            <i id="showSettings" class="material-icons">settings</i>
+        </ul>
+
+    </div>
+
+
+
 </header>
 
 <div class="indigo darken-1" id="outerSidebar">
@@ -27,6 +60,7 @@
 <script>
 	// You can also require other files to run in this process
 	require('../js/run/mainRenderer.js');
+	require('../js/run/mainFunctions');
 </script>
 </body>
 </html>

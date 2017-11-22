@@ -1,7 +1,19 @@
 {
-  "generalUsername": "Username",
+  "general": {
+    "username": "name"
+  },
   "irc": {
-    "username": "IRC Username"
+    "nick": "Groms",
+    "username": "IRC Username",
+    "realname": "My real Name",
+    "url": "irc.fsi.hochschule-trier.de",
+    "port": 6670,
+    "showErrors": false,
+    "autoRejoin": true,
+    "autoConnect": true,
+    "channels": ["#alle","#heinz"],
+    "secure": true,
+    "encoding": "UTF-8"
   },
   "discord": {
     "username": "Discord Username"
@@ -9,12 +21,10 @@
   "telegram": {
     "username": "Telegram Username"
   },
-  "facebook":
-  {
+  "facebook": {
     "username": "Facebook Username"
   },
-  "whatsapp":
-  {
+  "whatsapp": {
     "username": "Whatsapp Username"
   }
 }

@@ -2,28 +2,38 @@ const electron = require('electron');
 const path = require('path');
 const fs = require('fs');
 const keytar = require('keytar');
-const service = "groms";
+const defaultSettings = require('../../assets/defaultSettings.json');
+const service = 'groms';
+const Std = require('./Services/Std.js');
+const configName = 'grom_user_settings';
+
 
 module.exports = class Storage
 {
-	constructor(opts)
+	constructor()
 	{
 		const userDataPath = (electron.app || electron.remote.app).getPath('userData');
-		this.path = path.join(userDataPath, opts.configName + '.json');
-		this.data = this.parseDataFile(this.path, opts.defaults);
-		keytar.setPassword(service, 'myTestAccount', 'superSecretPassword');
-		keytar.findPassword()
+		this.path = path.join(userDataPath, configName + '.json');
+		this.data = this.parseDataFile(this.path, defaultSettings);
 	}
 
-	get(key)
+	saveData()
 	{
-		return this.data[key];
-	}
-
-	set(key, val)
-	{
-		this.data[key] = val;
 		fs.writeFileSync(this.path, JSON.stringify(this.data));
+	}
+
+	setPassword(account, pw)
+	{
+		keytar.setPassword(service, account, pw);
+	}
+
+	getPassword(account)
+	{
+		keytar.getPassword(service).then((pw) => {return pw}, (err) => {
+			console.log(error);
+			Std.Log(error, Std.LogLevel.ERROR);
+			return null;
+		});
 	}
 
 	parseDataFile(filePath, defaults)
@@ -37,16 +47,10 @@ module.exports = class Storage
 		}
 	}
 
-	setPassword(account, pw)
+	resetToDefault()
 	{
-		keytar.setPassword(service, account, pw);
+		this.data = defaultSettings;
+		this.saveData();
 	}
 
-	getPassword(account)
-	{
-		keytar.getPassword(service).then((pw) => {return pw}, (err) => {
-			console.log(error);
-			return null;
-		});
-	}
 };

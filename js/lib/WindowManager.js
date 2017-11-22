@@ -46,7 +46,7 @@ module.exports = class WindowManager
 
 		this.settingsWindow = new BrowserWindow({
 			parent: this.mainWindow,
-			modal: true,
+			modal: false,
 			hasShadow: true,
 			resizable: false,
 			width: 800,
