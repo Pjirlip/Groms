@@ -15,7 +15,6 @@ module.exports = class Storage
 		const userDataPath = (electron.app || electron.remote.app).getPath('userData');
 		this.path = path.join(userDataPath, configName + '.json');
 		this.data = this.parseDataFile(this.path, defaultSettings);
-
 	}
 
 	saveData()

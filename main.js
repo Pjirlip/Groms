@@ -23,7 +23,7 @@ let applicationsmenu = null;
 
 app.on('ready', () => {
 
-	Std.notifyOS("App is Running");
+	//Std.notifyOS("App is Running");
 	windowManager = new WindowManager(storage);
 	windowManager.createMainWindow();
 	applicationsmenu = new ApplicationMenu(windowManager);
