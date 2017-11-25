@@ -15,6 +15,7 @@ module.exports = class Storage
 		const userDataPath = (electron.app || electron.remote.app).getPath('userData');
 		this.path = path.join(userDataPath, configName + '.json');
 		this.data = this.parseDataFile(this.path, defaultSettings);
+
 	}
 
 	saveData()
@@ -29,7 +30,7 @@ module.exports = class Storage
 
 	getPassword(account)
 	{
-		keytar.getPassword(service).then((pw) => {return pw}, (err) => {
+		keytar.getPassword(service, account).then((pw) => {return pw}, (err) => {
 			console.log(error);
 			Std.Log(error, Std.LogLevel.ERROR);
 			return null;

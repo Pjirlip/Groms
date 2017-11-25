@@ -4,3 +4,4 @@ node_modules
 *.woff2
 *.woff
 .DS_Store
+/api-keys.json
